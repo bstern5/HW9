@@ -27,7 +27,7 @@ View(PAdata)
 #Also changed the variables to be a better indication of fracking area (# of wells instead of violation density)
 
 #Bubble plot
-NewBubble  <-  ggplot(PAdata, aes(x = NumberOfFrackingViolations, y=trustcompanies), color = "black")
+NewBubble  <-  ggplot(PAdata, aes(x = log(NumberOfFrackingViolations), y= log(trustcompanies)), color = "black") + geom_point()
                                   
 NewBubble  
 #geom_point(alpha=0.3) +
