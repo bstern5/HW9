@@ -18,6 +18,8 @@ library(hrbrthemes)
 
 #Created a separate xcel sheet for trust data
 PAdata <- read_csv('C:/Users/sg2362/Dropbox (Yale_FES)/2_year/Spring_2021/Data_Viz/Assignment9/HW9/trust_bubbleplot.csv') 
+
+
 # Fracking_Counties <- read_xlsx('C:/Users/sg2362/Dropbox (Yale_FES)/2_year/Spring_2021/Data_Viz/Assignment9/HW9/Counties W Fracking Data.xlsx') 
 
 #Creates Color Scheme between Dem and GOP counties
@@ -27,7 +29,8 @@ View(PAdata)
 #Also changed the variables to be a better indication of fracking area (# of wells instead of violation density)
 
 #Bubble plot
-NewBubble  <-  ggplot(PAdata, aes(x = log(NumberOfFrackingViolations), y= log(trustcompanies)), color = "black") + geom_point()
+NewBubble  <-  ggplot(PAdata, aes(x = log(NumberOfFrackingViolations), y= log(trustcompanies), color = TrumpWon2020)) + 
+  geom_point()
                                   
 NewBubble  
 #geom_point(alpha=0.3) +
